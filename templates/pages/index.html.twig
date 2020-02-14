@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+ {% block title %}NewsApp{% endblock %}
+    {% block body %}
+     
+  <div class="content mt-5">
+    <div class="row mb-5">
+    {% for single in news %}
+    <div class="col-6 mb-3">
+      <div class="card" >
+        <a href='readSingle/{{ single.id }}' class="text-center card-title">{{ single.title }}</a>
+        <div class="card-body">
+        <p class="card-text">{{ single.description }}</p>
+        <p class="date text-right">{{ single.date_updated.format('d/m/Y') }}</p>
+      </div>
+    </div>
+     </div>
+    {% endfor %}
+
+     
+
+    
+  </div>
+     </div>
+    {% endblock %}

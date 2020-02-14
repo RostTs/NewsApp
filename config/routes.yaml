@@ -4,3 +4,14 @@
 #index:
 #    path: /
 #    defaults: { _controller: 'App\Controller\DefaultController::index' }
+index:
+   path: /
+   defaults: { _controller: 'App\Controller\PagesController::home' }
+
+checkStatus:
+   path: /checkStatus
+   defaults: { _controller: 'App\Controller\PagesController::test' }
+
+readSingle:
+   path: /readSingle/{id}
+   defaults: { _controller: 'App\Controller\PagesController::readSingle' }
